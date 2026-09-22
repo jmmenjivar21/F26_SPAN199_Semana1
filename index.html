@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish for Healthcare · Capítulo 1 — Primeras palabras: saludos, pronombres, ser, llamarse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   SPANISH FOR HEALTHCARE WORKERS · CAPÍTULO 1
+   Introductions & Getting to Know People
+   alfabeto · saludos · pronombres · ser · llamarse · usted vs. tú
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --navy:#1B2E4F; --navy-light:#2E4977;
+  --terracotta:#C45D3A; --terracotta-light:#E0876A;
+  --gold:#D4A24C; --gold-light:#EBC373;
+  --sage:#6E8C5F; --sage-light:#9CB590;
+  --cream:#FBF7EE; --cream-dark:#F0E9D8;
+  --text:#1a1a1a; --text-light:#444; --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;font-size:16px;min-height:100vh;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+.app::before{content:'1';position:fixed;top:18px;right:24px;z-index:0;font-family:'Playfair Display',serif;font-size:9rem;font-weight:800;color:var(--navy);opacity:0.04;pointer-events:none;line-height:1;}
+
+.chap-head{margin-top:36px;padding:32px 36px;border-radius:18px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.chap-head::after{content:'';position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);}
+.header-badge{display:inline-block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(212,162,76,0.22);color:var(--gold-light);padding:5px 12px;border-radius:20px;margin-bottom:10px;}
+.header-title{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;}
+.header-subtitle{display:block;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;}
+
+.prog-bar{height:8px;background:var(--cream-dark);border-radius:4px;margin:6px 0 0;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));width:0%;transition:width 0.6s ease-out;}
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.completion-score{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--sage);background:rgba(110,140,95,0.14);padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.completion-pct{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);margin-left:14px;}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--text-light);border:1px solid transparent;cursor:pointer;transition:all 0.2s;}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);}
+
+.submit-bar{background:var(--cream-dark);border-radius:12px;padding:14px 18px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.submit-bar label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);}
+#studentName{flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{background:var(--terracotta);color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,transform 0.2s;}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);letter-spacing:0.04em;}
+
+.quiz-item{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--sage);}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);font-weight:400;margin-right:6px;}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{display:flex;align-items:flex-start;gap:10px;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;font-size:0.88rem;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);width:100%;transition:border-color 0.2s,background 0.2s;}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);flex-shrink:0;margin-top:2px;}
+.quiz-explain{font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;background:#fff;border-left:3px solid var(--gold);display:none;}
+.quiz-explain.show{display:block;}
+
+.task-input{width:100%;border:none;border-bottom:2px solid var(--cream-dark);background:transparent;font-family:inherit;font-size:0.92rem;color:var(--navy);padding:5px 6px;}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+
+.nav{display:flex;gap:4px;flex-wrap:wrap;background:#fff;padding:6px;border-radius:14px;box-shadow:var(--tile-shadow);margin-bottom:24px;}
+.tab{flex:1 1 auto;min-width:110px;padding:12px 14px;background:transparent;border:none;border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:all 0.18s ease;min-height:44px;}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(27,46,79,0.25);}
+
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sec-sub{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;}
+
+.week-hero{background:#fff;padding:26px 30px;border-radius:14px;margin-bottom:24px;box-shadow:var(--tile-shadow);border-left:5px solid var(--terracotta);}
+.week-hero h1{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--navy);margin-bottom:8px;}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-block;padding:5px 11px;background:var(--cream-dark);color:var(--navy);border-radius:14px;font-size:0.78rem;font-weight:600;font-family:'Space Mono',monospace;letter-spacing:0.02em;}
+
+.ch-intro{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.ch-intro::before{content:'';position:absolute;left:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);}
+.ch-intro .label{position:relative;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.ch-intro h2{position:relative;font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.ch-intro p{position:relative;font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);}
+
+.card{background:#fff;padding:22px 26px;border-radius:14px;margin-bottom:18px;box-shadow:var(--tile-shadow);}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.card-title .pill{font-family:'Space Mono',monospace;font-size:0.65rem;background:var(--gold);color:#fff;padding:3px 9px;border-radius:12px;letter-spacing:0.1em;}
+
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.obj{background:var(--cream);padding:14px 16px;border-radius:10px;border-left:3px solid var(--sage);display:flex;gap:11px;align-items:flex-start;}
+.obj-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.vocab-card{perspective:1000px;height:118px;cursor:pointer;}
+.vocab-card-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border-radius:11px;text-align:center;box-shadow:var(--tile-shadow);}
+.vocab-front{background:#fff;border:2px solid var(--cream-dark);font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:0.98rem;}
+.vocab-front small{display:block;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);font-weight:400;margin-top:5px;letter-spacing:0.04em;}
+.vocab-back{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));color:#fff;transform:rotateY(180deg);font-size:0.92rem;font-weight:600;}
+.vocab-card.conn-card .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.conn-card .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+
+.gbox{background:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--tile-shadow);border-top:4px solid var(--terracotta);}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.gbox h3 .num{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--terracotta);color:#fff;padding:4px 10px;border-radius:11px;letter-spacing:0.1em;}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;}
+
+.conj-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(27,46,79,0.05);}
+.conj-table th,.conj-table td{padding:9px 13px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--cream-dark);}
+.conj-table th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;}
+.conj-table td .pn{color:var(--text-hint);}
+.conj-table td .fm{color:var(--terracotta);font-weight:700;font-style:italic;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+.conj-table tr:last-child td{border-bottom:none;}
+
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--cream);padding:16px 18px;border-radius:10px;border-top:4px solid var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:4px;}
+.col-card .meaning{font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--text-hint);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;}
+.col-card .ex{font-style:italic;font-size:0.85rem;color:var(--text);background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+.ex-box{background:var(--cream);border-left:3px solid var(--sage);padding:12px 16px;border-radius:8px;margin:14px 0;}
+.ex-box p{font-size:0.9rem;color:var(--text);margin:4px 0;}
+.ex-box em{color:var(--text-hint);font-style:italic;}
+.ojo{background:#FFF6F0;border-left:4px solid var(--terracotta);padding:14px 18px;border-radius:8px;margin:16px 0;}
+.ojo-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* Alphabet grid */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin:14px 0;}
+.alpha-cell{background:var(--cream);border-radius:8px;padding:9px 6px;text-align:center;border:1px solid var(--cream-dark);}
+.alpha-cell .ltr{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);display:block;}
+.alpha-cell .nm{font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--terracotta);letter-spacing:0.04em;display:block;margin-top:2px;}
+.vowel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0;}
+.vowel-cell{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;border-radius:10px;padding:14px 10px;text-align:center;}
+.vowel-cell .v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;display:block;line-height:1;}
+.vowel-cell .s{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gold-light);display:block;margin-top:6px;letter-spacing:0.06em;}
+.vowel-cell .w{font-size:0.8rem;color:rgba(255,255,255,0.9);display:block;margin-top:4px;font-style:italic;}
+
+.ex-item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--cream-dark);font-size:0.97rem;}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;}
+.ex-text{flex:1;line-height:1.9;color:var(--text);}
+.ex-hint{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--terracotta);margin-left:4px;}
+.blk{display:inline-block;width:120px;padding:6px 10px;border:2px solid var(--cream-dark);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.blk.wide{width:170px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:none;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.92rem;font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.word-bank{background:var(--cream);padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:0.88rem;}
+.word-bank-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.word-bank-words span{display:inline-block;background:#fff;padding:3px 9px;border-radius:11px;margin:2px 3px;font-size:0.84rem;border:1px solid var(--cream-dark);color:var(--navy);font-weight:700;}
+
+/* Matching */
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.match-col-label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-hint);margin-bottom:6px;}
+.mi{padding:11px 13px;border:2px solid var(--cream-dark);border-radius:9px;cursor:pointer;font-size:0.86rem;background:#fff;transition:all 0.12s;line-height:1.4;margin-bottom:7px;color:var(--text);}
+.mi:hover{border-color:var(--sage-light);}
+.mi.sel{border-color:var(--navy);background:#f3f5fa;color:var(--navy);}
+.mi.done{border-color:var(--sage);background:#eef6ea;color:#3F5C32;pointer-events:none;opacity:0.75;}
+.mi.bad{border-color:var(--terracotta);background:#fbeceb;}
+
+/* Conjugation game */
+.game-wrap{background:var(--cream);border-radius:14px;padding:22px;text-align:center;}
+.game-scorebar{display:flex;justify-content:center;gap:22px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);}
+.game-scorebar b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terracotta);margin-top:2px;}
+.game-prompt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin:10px 0 4px;}
+.game-sub{font-size:0.85rem;color:var(--text-hint);font-style:italic;margin-bottom:18px;}
+.game-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto;}
+@media(max-width:520px){.game-opts{grid-template-columns:1fr;}}
+.game-opt{background:#fff;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 10px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;transition:all 0.12s;}
+.game-opt:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+.game-opt.is-correct{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.game-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;color:#8E3A1F;}
+.game-feedback{min-height:22px;margin-top:14px;font-weight:700;font-size:0.95rem;}
+.game-feedback.ok{color:#3F5C32;}
+.game-feedback.ng{color:#8E3A1F;}
+.game-done{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);}
+
+.cult-card{background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px;box-shadow:var(--soft-shadow);}
+.cult-card .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.cult-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#fff;}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card .fact-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cult-card .fact-pills span{background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;}
+
+.footer{margin-top:36px;padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--text-hint);letter-spacing:0.05em;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · SPANISH FOR HEALTHCARE</span>
+    <span class="header-title">Capítulo 1 — Primeras palabras</span>
+    <span class="header-subtitle">Introductions &amp; Getting to Know People</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-score" id="completionScore">★ 0% correcto</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">⬇ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your chapter report to turn in.</span>
+  </div>
+
+  <nav class="nav" aria-label="Chapter sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)">Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)">Gramática</button>
+    <button class="tab" onclick="switchTab('ej',this)">Ejercicios</button>
+    <button class="tab" onclick="switchTab('ju',this)">Juegos</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Capítulo 1 · Primeras palabras</h2>
+    <p class="sec-sub">alfabeto · saludos · pronombres · ser · llamarse · usted vs. tú</p>
+
+    <div class="ch-intro">
+      <div class="label">¡Bienvenidos! · Welcome</div>
+      <h2>Your first words with a Spanish-speaking patient</h2>
+      <p>Every patient encounter starts the same way: a greeting, a name, and a question. In this chapter you'll learn to pronounce Spanish clearly, greet a patient at any hour, introduce yourself professionally, and ask the two questions that open almost every intake: <em>¿Cómo se llama usted?</em> and <em>¿De dónde es usted?</em> You'll also learn when to use <strong>usted</strong> and when to use <strong>tú</strong> — a choice that signals respect in a clinical setting.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>What this chapter covers</h1>
+      <p>Eight building blocks that let you open a conversation in Spanish with confidence. Everything is graded automatically, so you can see exactly which pieces still need work before class.</p>
+      <div class="topic-chips">
+        <span class="chip">alfabeto · vocales</span>
+        <span class="chip">saludos · despedidas</span>
+        <span class="chip">pronombres personales</span>
+        <span class="chip">SER (presente)</span>
+        <span class="chip">LLAMARSE (reflexivo)</span>
+        <span class="chip">usted vs. tú</span>
+        <span class="chip">10 frases esenciales</span>
+        <span class="chip">preguntas personales</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Objetivos · By the end of this chapter you can <span class="pill">CAP 1</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Pronounce the <strong>Spanish alphabet</strong> and the five vowels, and spell a name out loud for an intake form.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Give <strong>greetings and farewells</strong> appropriate to the time of day and to a clinical setting.</span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text">Use <strong>subject pronouns</strong> — <em>yo, tú, usted, él/ella, nosotros, ellos/ustedes</em>.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">Conjugate <strong>SER</strong> in the present to give your name, origin, and occupation.</span></div>
+        <div class="obj"><span class="obj-num">5</span><span class="obj-text">Use <strong>LLAMARSE</strong> and its reflexive pronouns to give and ask for names.</span></div>
+        <div class="obj"><span class="obj-num">6</span><span class="obj-text">Choose correctly between <strong>usted</strong> and <strong>tú</strong> with patients, colleagues, and children.</span></div>
+        <div class="obj"><span class="obj-num">7</span><span class="obj-text">Use <strong>10 essential phrases</strong> for the classroom and the clinic.</span></div>
+        <div class="obj"><span class="obj-num">8</span><span class="obj-text">Ask and answer <strong>basic personal questions</strong> in a patient intake.</span></div>
+      </div>
+    </div>
+
+    <div class="cult-card">
+      <div class="label">Nota cultural · Respect in the clinic</div>
+      <h3>El respeto: usted, don y doña</h3>
+      <p>In most Spanish-speaking cultures, addressing an adult patient with <em>usted</em> is a basic sign of respect — especially with older adults. Many patients also expect titles: <em>señor</em>, <em>señora</em>, <em>don</em>, <em>doña</em>. Using <em>tú</em> with an adult you have just met can come across as dismissive, even when you mean to be warm. When in doubt in a healthcare setting, <strong>always start with usted</strong> and let the patient invite you to switch.</p>
+      <div class="fact-pills">
+        <span>usted = respeto</span>
+        <span>señor / señora</span>
+        <span>don / doña</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Vocabulario · Capítulo 1</h2>
+    <p class="sec-sub">saludos &amp; despedidas · frases esenciales</p>
+
+    <p class="vocab-hint">Tap any card to flip it. The small note shows the register or category. Say it out loud before flipping.</p>
+
+    <div class="card">
+      <div class="card-title">Saludos y despedidas <span class="pill">14 CARDS</span></div>
+      <div class="vocab-grid" id="fcGreet"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">10 frases esenciales · clínica y clase <span class="pill">10 PHRASES</span></div>
+      <div class="vocab-grid" id="fcPhrases"></div>
+    </div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Gramática · Capítulo 1</h2>
+    <p class="sec-sub">everything you need to open a conversation</p>
+
+    <!-- G1 alphabet -->
+    <div class="gbox">
+      <h3><span class="num">G1</span>El alfabeto español</h3>
+      <p class="sub">27 letters. You will use these constantly to spell patient names: <em>¿Cómo se escribe su apellido?</em></p>
+      <div class="alpha-grid">
+        <div class="alpha-cell"><span class="ltr">A a</span><span class="nm">a</span></div>
+        <div class="alpha-cell"><span class="ltr">B b</span><span class="nm">be</span></div>
+        <div class="alpha-cell"><span class="ltr">C c</span><span class="nm">ce</span></div>
+        <div class="alpha-cell"><span class="ltr">D d</span><span class="nm">de</span></div>
+        <div class="alpha-cell"><span class="ltr">E e</span><span class="nm">e</span></div>
+        <div class="alpha-cell"><span class="ltr">F f</span><span class="nm">efe</span></div>
+        <div class="alpha-cell"><span class="ltr">G g</span><span class="nm">ge</span></div>
+        <div class="alpha-cell"><span class="ltr">H h</span><span class="nm">hache</span></div>
+        <div class="alpha-cell"><span class="ltr">I i</span><span class="nm">i</span></div>
+        <div class="alpha-cell"><span class="ltr">J j</span><span class="nm">jota</span></div>
+        <div class="alpha-cell"><span class="ltr">K k</span><span class="nm">ka</span></div>
+        <div class="alpha-cell"><span class="ltr">L l</span><span class="nm">ele</span></div>
+        <div class="alpha-cell"><span class="ltr">M m</span><span class="nm">eme</span></div>
+        <div class="alpha-cell"><span class="ltr">N n</span><span class="nm">ene</span></div>
+        <div class="alpha-cell"><span class="ltr">Ñ ñ</span><span class="nm">eñe</span></div>
+        <div class="alpha-cell"><span class="ltr">O o</span><span class="nm">o</span></div>
+        <div class="alpha-cell"><span class="ltr">P p</span><span class="nm">pe</span></div>
+        <div class="alpha-cell"><span class="ltr">Q q</span><span class="nm">cu</span></div>
+        <div class="alpha-cell"><span class="ltr">R r</span><span class="nm">ere / erre</span></div>
+        <div class="alpha-cell"><span class="ltr">S s</span><span class="nm">ese</span></div>
+        <div class="alpha-cell"><span class="ltr">T t</span><span class="nm">te</span></div>
+        <div class="alpha-cell"><span class="ltr">U u</span><span class="nm">u</span></div>
+        <div class="alpha-cell"><span class="ltr">V v</span><span class="nm">uve</span></div>
+        <div class="alpha-cell"><span class="ltr">W w</span><span class="nm">uve doble</span></div>
+        <div class="alpha-cell"><span class="ltr">X x</span><span class="nm">equis</span></div>
+        <div class="alpha-cell"><span class="ltr">Y y</span><span class="nm">ye</span></div>
+        <div class="alpha-cell"><span class="ltr">Z z</span><span class="nm">zeta</span></div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · letras difíciles</div><p><em>h</em> is always silent (<strong>h</strong>ola = "ola"). <em>j</em> sounds like English "h" (<strong>J</strong>uan). <em>ll</em> sounds like "y" (e<strong>ll</strong>a). <em>ñ</em> sounds like "ny" (ma<strong>ñ</strong>ana). <em>rr</em> is trilled (pe<strong>rr</strong>o). <em>qu</em> = "k" (<strong>qu</strong>é). <em>g</em> before <em>e/i</em> sounds like "h" (<strong>g</strong>ente).</p></div>
+    </div>
+
+    <!-- G2 vowels -->
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Las cinco vocales</h3>
+      <p class="sub">Spanish vowels are short, pure, and <strong>never</strong> change. Master these five and your pronunciation is already clear.</p>
+      <div class="vowel-grid">
+        <div class="vowel-cell"><span class="v">A</span><span class="s">ah</span><span class="w">f<u>a</u>ther</span></div>
+        <div class="vowel-cell"><span class="v">E</span><span class="s">eh</span><span class="w">m<u>e</u>t</span></div>
+        <div class="vowel-cell"><span class="v">I</span><span class="s">ee</span><span class="w">s<u>ee</u></span></div>
+        <div class="vowel-cell"><span class="v">O</span><span class="s">oh</span><span class="w">m<u>o</u>re</span></div>
+        <div class="vowel-cell"><span class="v">U</span><span class="s">oo</span><span class="w">f<u>oo</u>d</span></div>
+      </div>
+      <div class="ex-box">
+        <p><strong>Practice with names you'll hear in clinic:</strong> <em>M-a-r-í-a</em> (ma-RI-a) · <em>J-o-s-é</em> (ho-SE) · <em>L-u-i-s</em> (LWEES) · <em>C-a-r-m-e-n</em> (KAR-men) · <em>M-e-n-j-í-v-a-r</em> (men-HI-var).</p>
+      </div>
+      <div class="ojo"><div class="ojo-title">CLAVE · sin diptongos ingleses</div><p>English speakers tend to glide vowels ("o" → "ow"). In Spanish keep each vowel <em>pure and short</em>. <em>No</em> is "noh," not "nooow." This one habit makes you far easier for patients to understand.</p></div>
+    </div>
+
+    <!-- G3 greetings -->
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Saludos y despedidas</h3>
+      <p class="sub">Choose by the clock, and by how formal the relationship is.</p>
+      <table class="conj-table">
+        <thead><tr><th>Hora / Situación</th><th>Saludo</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">midnight to noon</span></td><td class="accent">Buenos días</td><td>Good morning</td></tr>
+          <tr><td><span class="pn">noon to ~7 p.m.</span></td><td class="accent">Buenas tardes</td><td>Good afternoon</td></tr>
+          <tr><td><span class="pn">after dark</span></td><td class="accent">Buenas noches</td><td>Good evening / Good night</td></tr>
+          <tr><td><span class="pn">informal, any time</span></td><td class="accent">Hola · ¿Qué tal?</td><td>Hi · How's it going?</td></tr>
+          <tr><td><span class="pn">formal "how are you"</span></td><td class="accent">¿Cómo está usted?</td><td>How are you? (formal)</td></tr>
+          <tr><td><span class="pn">informal "how are you"</span></td><td class="accent">¿Cómo estás?</td><td>How are you? (informal)</td></tr>
+        </tbody>
+      </table>
+      <table class="conj-table">
+        <thead><tr><th>Despedida</th><th>English</th><th>Cuándo usarla</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">Adiós</td><td>Goodbye</td><td><span class="pn">general</span></td></tr>
+          <tr><td class="accent">Hasta luego</td><td>See you later</td><td><span class="pn">same day or soon</span></td></tr>
+          <tr><td class="accent">Hasta mañana</td><td>See you tomorrow</td><td><span class="pn">next-day appointment</span></td></tr>
+          <tr><td class="accent">Cuídese</td><td>Take care (formal)</td><td><span class="pn">patient discharge</span></td></tr>
+          <tr><td class="accent">Que se mejore</td><td>Get well soon (formal)</td><td><span class="pn">patient who is ill</span></td></tr>
+          <tr><td class="accent">Mucho gusto</td><td>Nice to meet you</td><td><span class="pn">first introduction</span></td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">EN LA CLÍNICA</div><p><em>Buenas noches</em> is both a greeting and a farewell. And notice that <em>Cuídese</em> and <em>Que se mejore</em> are already in the <strong>usted</strong> form — exactly what you want with patients.</p></div>
+    </div>
+
+    <!-- G4 pronouns -->
+    <div class="gbox">
+      <h3><span class="num">G4</span>Pronombres personales · subject pronouns</h3>
+      <p class="sub">Who is doing the action. Spanish often drops them, because the verb ending already tells you.</p>
+      <table class="conj-table">
+        <thead><tr><th></th><th>Singular</th><th>Plural</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">1st person</span></td><td><span class="accent">yo</span> — I</td><td><span class="accent">nosotros / nosotras</span> — we</td></tr>
+          <tr><td><span class="pn">2nd person (informal)</span></td><td><span class="accent">tú</span> — you</td><td><span class="accent">ustedes</span> — you all</td></tr>
+          <tr><td><span class="pn">2nd person (formal)</span></td><td><span class="accent">usted</span> — you</td><td><span class="accent">ustedes</span> — you all</td></tr>
+          <tr><td><span class="pn">3rd person</span></td><td><span class="accent">él</span> — he · <span class="accent">ella</span> — she</td><td><span class="accent">ellos / ellas</span> — they</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-box">
+        <p><strong>Abbreviations on forms and charts:</strong> <em>usted</em> → <strong>Ud.</strong> · <em>ustedes</em> → <strong>Uds.</strong></p>
+        <p><strong>Dropping the pronoun:</strong> <em>Yo soy enfermera</em> and <em>Soy enfermera</em> both mean "I am a nurse." Use the pronoun for emphasis or contrast: <em>Yo soy el enfermero; <u>él</u> es el doctor.</em></p>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · usted is grammatically "he/she"</div><p>Even though <em>usted</em> means "you," it takes the same verb form as <em>él/ella</em>: <em>usted <strong>es</strong></em>, <em>usted <strong>se llama</strong></em>. This trips up nearly every beginner. In Latin America, <em>ustedes</em> covers both formal and informal "you all" — <em>vosotros</em> is used mainly in Spain.</p></div>
+    </div>
+
+    <!-- G5 SER -->
+    <div class="gbox alt">
+      <h3><span class="num">G5</span>El verbo SER · to be</h3>
+      <p class="sub">Irregular, high-frequency, and the backbone of every introduction.</p>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>SER</th><th>Ejemplo clínico</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="accent">soy</td><td>Yo <strong>soy</strong> el enfermero.</td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="accent">eres</td><td>Tú <strong>eres</strong> muy amable.</td></tr>
+          <tr><td><span class="pn">él / ella / usted</span></td><td class="accent">es</td><td>Usted <strong>es</strong> la señora Gómez.</td></tr>
+          <tr><td><span class="pn">nosotros / nosotras</span></td><td class="accent">somos</td><td>Nosotros <strong>somos</strong> estudiantes.</td></tr>
+          <tr><td><span class="pn">ellos / ellas / ustedes</span></td><td class="accent">son</td><td>Ellos <strong>son</strong> pacientes nuevos.</td></tr>
+        </tbody>
+      </table>
+      <div class="three-col">
+        <div class="col-card">
+          <h4>NOMBRE</h4>
+          <div class="meaning">identity</div>
+          <div class="ex"><strong>Soy</strong> Ana Torres.</div>
+          <div class="ex">Él <strong>es</strong> el doctor Ruiz.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>ORIGEN</h4>
+          <div class="meaning">where you're from</div>
+          <div class="ex"><strong>Soy de</strong> El Salvador.</div>
+          <div class="ex">¿De dónde <strong>es</strong> usted?</div>
+        </div>
+        <div class="col-card sg">
+          <h4>PROFESIÓN</h4>
+          <div class="meaning">occupation</div>
+          <div class="ex"><strong>Soy</strong> enfermera.</div>
+          <div class="ex">Ella <strong>es</strong> recepcionista.</div>
+        </div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · sin artículo</div><p>With professions, Spanish drops the article: <em>Soy enfermera</em> — not "soy <s>una</s> enfermera." Add <em>de</em> for origin: <em>Soy <strong>de</strong> Guatemala.</em></p></div>
+    </div>
+
+    <!-- G6 LLAMARSE -->
+    <div class="gbox alt2">
+      <h3><span class="num">G6</span>El verbo LLAMARSE · reflexivo</h3>
+      <p class="sub">Literally "to call oneself." The reflexive pronoun changes with the subject, and the verb itself is regular <em>-ar</em>.</p>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>Pronombre</th><th>LLAMARSE</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="fm">me</td><td class="accent">llamo</td><td>my name is</td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="fm">te</td><td class="accent">llamas</td><td>your name is (informal)</td></tr>
+          <tr><td><span class="pn">él / ella / usted</span></td><td class="fm">se</td><td class="accent">llama</td><td>his/her/your name is</td></tr>
+          <tr><td><span class="pn">nosotros / nosotras</span></td><td class="fm">nos</td><td class="accent">llamamos</td><td>our names are</td></tr>
+          <tr><td><span class="pn">ellos / ellas / ustedes</span></td><td class="fm">se</td><td class="accent">llaman</td><td>their names are</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-box">
+        <p><strong>— ¿Cómo se llama usted?</strong> <em>(What is your name? — formal)</em></p>
+        <p><strong>— Me llamo Roberto Díaz.</strong> <em>(My name is Roberto Díaz.)</em></p>
+        <p><strong>— Mucho gusto. Yo me llamo Ana, soy su enfermera.</strong> <em>(Nice to meet you. I'm Ana, I'm your nurse.)</em></p>
+      </div>
+      <div class="ojo"><div class="ojo-title">DOS APELLIDOS</div><p>Most Spanish speakers carry <strong>two last names</strong>: father's first, then mother's. <em>Roberto Díaz Hernández</em> is filed under <em>Díaz</em>, not <em>Hernández</em>. On intake forms, always confirm: <em>¿Cuál es su primer apellido?</em> This prevents a very common charting error.</p></div>
+    </div>
+
+    <!-- G7 usted vs tú -->
+    <div class="gbox">
+      <h3><span class="num">G7</span>Usted vs. tú · formal e informal</h3>
+      <p class="sub">The single most important register choice you will make with patients.</p>
+      <div class="three-col">
+        <div class="col-card">
+          <h4>USTED</h4>
+          <div class="meaning">formal · respect · distance</div>
+          <div class="ex">patients you've just met</div>
+          <div class="ex">older adults</div>
+          <div class="ex">supervisors, physicians</div>
+          <div class="ex">¿Cómo <strong>se llama</strong> usted?</div>
+          <div class="ex">¿De dónde <strong>es</strong> usted?</div>
+        </div>
+        <div class="col-card gd">
+          <h4>TÚ</h4>
+          <div class="meaning">informal · closeness</div>
+          <div class="ex">children</div>
+          <div class="ex">close friends, family</div>
+          <div class="ex">classmates, peers</div>
+          <div class="ex">¿Cómo <strong>te llamas</strong>?</div>
+          <div class="ex">¿De dónde <strong>eres</strong>?</div>
+        </div>
+        <div class="col-card sg">
+          <h4>LA CLAVE</h4>
+          <div class="meaning">the rule in healthcare</div>
+          <div class="ex">Default to <strong>usted</strong>.</div>
+          <div class="ex">Switch only if invited: <em>Puedes tutearme.</em></div>
+          <div class="ex">usted → same form as <em>él/ella</em></div>
+        </div>
+      </div>
+      <table class="conj-table">
+        <thead><tr><th>Pregunta</th><th>Con TÚ (informal)</th><th>Con USTED (formal)</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">What's your name?</span></td><td>¿Cómo <span class="accent">te llamas</span>?</td><td>¿Cómo <span class="accent">se llama</span> usted?</td></tr>
+          <tr><td><span class="pn">Where are you from?</span></td><td>¿De dónde <span class="accent">eres</span>?</td><td>¿De dónde <span class="accent">es</span> usted?</td></tr>
+          <tr><td><span class="pn">How are you?</span></td><td>¿Cómo <span class="accent">estás</span>?</td><td>¿Cómo <span class="accent">está</span> usted?</td></tr>
+          <tr><td><span class="pn">Take care.</span></td><td><span class="accent">Cuídate.</span></td><td><span class="accent">Cuídese.</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- G8 personal questions -->
+    <div class="gbox alt">
+      <h3><span class="num">G8</span>Preguntas personales · patient intake</h3>
+      <p class="sub">The questions that open almost every encounter. All in the <em>usted</em> form.</p>
+      <table class="conj-table">
+        <thead><tr><th>Pregunta</th><th>English</th><th>Respuesta modelo</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">¿Cómo se llama usted?</td><td>What is your name?</td><td>Me llamo Carmen Ríos.</td></tr>
+          <tr><td class="accent">¿Cuál es su apellido?</td><td>What is your last name?</td><td>Ríos.</td></tr>
+          <tr><td class="accent">¿Cómo se escribe?</td><td>How do you spell it?</td><td>R-í-o-s.</td></tr>
+          <tr><td class="accent">¿De dónde es usted?</td><td>Where are you from?</td><td>Soy de México.</td></tr>
+          <tr><td class="accent">¿Cuántos años tiene?</td><td>How old are you?</td><td>Tengo cuarenta años.</td></tr>
+          <tr><td class="accent">¿Habla usted inglés?</td><td>Do you speak English?</td><td>Un poco. / No, no hablo inglés.</td></tr>
+          <tr><td class="accent">¿En qué puedo ayudarle?</td><td>How can I help you?</td><td>Tengo una cita a las dos.</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">PALABRAS INTERROGATIVAS</div><p><em>¿qué?</em> what · <em>¿quién?</em> who · <em>¿dónde?</em> where · <em>¿cuándo?</em> when · <em>¿cómo?</em> how · <em>¿cuántos?</em> how many · <em>¿cuál?</em> which. Every question word carries an accent, and questions open with <strong>¿</strong>.</p></div>
+    </div>
+  </section>
+
+  <!-- ═══ EJERCICIOS ═══ -->
+  <section class="sec" id="sec-ej">
+    <h2 class="sec-title">Ejercicios · Práctica</h2>
+    <p class="sec-sub">Ejercicio 1 · 2 · 3 · 4 · 5 · 6 · 7</p>
+
+    <!-- Ej 1 SER -->
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · El verbo SER <span class="pill">PRESENTE</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the correct present-tense form of <em>ser</em>.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Yo <input class="blk" id="e1_1" data-answer="soy" placeholder="___"> enfermero en la clínica. <span class="ex-hint">(yo)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿De dónde <input class="blk" id="e1_2" data-answer="es" placeholder="___"> usted? <span class="ex-hint">(usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Nosotros <input class="blk" id="e1_3" data-answer="somos" placeholder="___"> estudiantes de español. <span class="ex-hint">(nosotros)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Ella <input class="blk" id="e1_4" data-answer="es" placeholder="___"> la doctora Ramírez. <span class="ex-hint">(ella)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Tú <input class="blk" id="e1_5" data-answer="eres" placeholder="___"> muy amable con los pacientes. <span class="ex-hint">(tú)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Ellos <input class="blk" id="e1_6" data-answer="son" placeholder="___"> pacientes nuevos. <span class="ex-hint">(ellos)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Yo <input class="blk" id="e1_7" data-answer="soy" placeholder="___"> de El Salvador. <span class="ex-hint">(origen)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">Usted <input class="blk" id="e1_8" data-answer="es" placeholder="___"> el señor Gómez, ¿verdad? <span class="ex-hint">(usted)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Reset</button>
+      <div class="res-msg" id="rs1" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 2 LLAMARSE -->
+    <div class="card">
+      <div class="card-title">Ejercicio 2 · LLAMARSE <span class="pill">REFLEXIVO</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>me</span><span>te</span><span>se</span><span>nos</span><span>llamo</span><span>llamas</span><span>llama</span><span>llamamos</span><span>llaman</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Yo <input class="blk" id="e2_1" data-answer="me" placeholder="___"> llamo Ana Torres. <span class="ex-hint">(pronombre)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿Cómo <input class="blk" id="e2_2" data-answer="se" placeholder="___"> llama usted? <span class="ex-hint">(pronombre)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Mi paciente se <input class="blk" id="e2_3" data-answer="llama" placeholder="___"> Roberto. <span class="ex-hint">(verbo)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">¿Cómo te <input class="blk" id="e2_4" data-answer="llamas" placeholder="___">? <span class="ex-hint">(verbo, tú)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Nosotros <input class="blk" id="e2_5" data-answer="nos" placeholder="___"> llamamos García. <span class="ex-hint">(pronombre)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Los doctores se <input class="blk" id="e2_6" data-answer="llaman" placeholder="___"> Pérez y Soto. <span class="ex-hint">(verbo, ellos)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6','rs2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6','rs2')">Reset</button>
+      <div class="res-msg" id="rs2" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 3 pronouns -->
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · Pronombres personales <span class="pill">SUSTITUCIÓN</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Replace the underlined words with the correct subject pronoun.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><u>María</u> → <input class="blk" id="e3_1" data-answer="ella" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><u>el doctor Pérez</u> → <input class="blk" id="e3_2" data-answer="él" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><u>tú y yo</u> → <input class="blk" id="e3_3" data-answer="nosotros" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text"><u>los pacientes</u> → <input class="blk" id="e3_4" data-answer="ellos" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text"><u>la señora Gómez</u>, hablando directamente con ella (formal) → <input class="blk" id="e3_5" data-answer="usted" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text"><u>Ana y Luisa</u> → <input class="blk" id="e3_6" data-answer="ellas" placeholder="___"></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6','rs3')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6','rs3')">Reset</button>
+      <div class="res-msg" id="rs3" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 4 usted vs tu -->
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · ¿Usted o tú? <span class="pill">REGISTRO</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write <em>usted</em> or <em>tú</em> for each situation.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Usted habla con un paciente de 70 años. → <input class="blk" id="e4_1" data-answer="usted" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Usted habla con su mejor amigo. → <input class="blk" id="e4_2" data-answer="tú" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Usted habla con un niño de seis años. → <input class="blk" id="e4_3" data-answer="tú" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Usted habla con el director del hospital. → <input class="blk" id="e4_4" data-answer="usted" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Usted recibe a una paciente nueva. → <input class="blk" id="e4_5" data-answer="usted" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Usted habla con su hermano. → <input class="blk" id="e4_6" data-answer="tú" placeholder="___"></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Reset</button>
+      <div class="res-msg" id="rs4" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 5 greetings -->
+    <div class="card">
+      <div class="card-title">Ejercicio 5 · Saludos y despedidas <span class="pill">SITUACIONES</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>buenos días</span><span>buenas tardes</span><span>buenas noches</span><span>hasta mañana</span><span>cuídese</span><span>mucho gusto</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Son las 9:00 a.m. Usted saluda a un paciente: <input class="blk wide" id="e5_1" data-answer="buenos días" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Son las 3:00 p.m. Usted saluda: <input class="blk wide" id="e5_2" data-answer="buenas tardes" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Son las 9:00 p.m. Usted saluda: <input class="blk wide" id="e5_3" data-answer="buenas noches" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">El paciente sale de la clínica. Usted dice: <input class="blk wide" id="e5_4" data-answer="cuídese" placeholder="___"> <span class="ex-hint">(take care, formal)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">El paciente vuelve el próximo día: <input class="blk wide" id="e5_5" data-answer="hasta mañana" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Usted conoce a un paciente por primera vez: <input class="blk wide" id="e5_6" data-answer="mucho gusto" placeholder="___"></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6','rs5')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6','rs5')">Reset</button>
+      <div class="res-msg" id="rs5" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 6 essential phrases -->
+    <div class="card">
+      <div class="card-title">Ejercicio 6 · Frases esenciales <span class="pill">CLÍNICA · CLASE</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>entiendo</span><span>repetir</span><span>despacio</span><span>escribe</span><span>intérprete</span><span>ayudarle</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">No <input class="blk" id="e6_1" data-answer="entiendo" placeholder="___">. <span class="ex-hint">(I don't understand)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿Puede <input class="blk" id="e6_2" data-answer="repetir" placeholder="___">, por favor? <span class="ex-hint">(repeat)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Más <input class="blk" id="e6_3" data-answer="despacio" placeholder="___">, por favor. <span class="ex-hint">(slower)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">¿Cómo se <input class="blk" id="e6_4" data-answer="escribe" placeholder="___"> su apellido? <span class="ex-hint">(spell)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Necesito un <input class="blk" id="e6_5" data-answer="intérprete" placeholder="___">. <span class="ex-hint">(interpreter)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">¿En qué puedo <input class="blk" id="e6_6" data-answer="ayudarle" placeholder="___">? <span class="ex-hint">(help you, formal)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e6_1,e6_2,e6_3,e6_4,e6_5,e6_6','rs6')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e6_1,e6_2,e6_3,e6_4,e6_5,e6_6','rs6')">Reset</button>
+      <div class="res-msg" id="rs6" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 7 short answer -->
+    <div class="card">
+      <div class="card-title">Ejercicio 7 · Respuesta corta — En la clínica <span class="pill">SE CORRIGE SOLA</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Answer each prompt in a complete Spanish sentence. The page checks that you used the right verb or phrase.</p>
+      <div id="shortCont"></div>
+      <button class="chk-btn" onclick="checkShort()">Check My Answers</button>
+      <button class="rst-btn" onclick="resetShort()">Reset</button>
+      <div class="res-msg" id="rs7" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ JUEGOS ═══ -->
+  <section class="sec" id="sec-ju">
+    <h2 class="sec-title">Juegos · Play &amp; practice</h2>
+    <p class="sec-sub">matching · quiz · conjugation challenge</p>
+
+    <div class="card">
+      <div class="card-title">Juego 1 · Emparejamiento — Frases clave <span class="pill">MATCHING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Click a Spanish phrase, then its English meaning. Correct pairs turn green.</p>
+      <div id="matchCont"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch()">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 2 · Opción múltiple — Capítulo 1 <span class="pill">QUIZ</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Ten questions on pronunciation, greetings, pronouns, <em>ser</em>, <em>llamarse</em>, and register. Pick the best answer, then score it.</p>
+      <div id="quizCont"></div>
+      <button class="chk-btn" onclick="checkQuiz()">Score My Quiz</button>
+      <button class="rst-btn" onclick="resetQuiz()">Reset</button>
+      <div class="res-msg" id="rsQuiz" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 3 · Reto de conjugación — SER &amp; LLAMARSE <span class="pill">12 ITEMS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Choose the correct form for each subject. Build your streak!</p>
+      <div class="game-wrap" id="gameWrap">
+        <div class="game-scorebar">
+          <div>Puntos<b id="gScore">0</b></div>
+          <div>Racha<b id="gStreak">0</b></div>
+          <div>Pregunta<b id="gNum">1/12</b></div>
+        </div>
+        <div class="game-prompt" id="gPrompt">—</div>
+        <div class="game-sub" id="gSub"></div>
+        <div class="game-opts" id="gOpts"></div>
+        <div class="game-feedback" id="gFb"></div>
+      </div>
+      <button class="rst-btn" style="margin-left:0;" onclick="startGame()">Restart Game</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish for Healthcare Workers · Capítulo 1 · Introductions &amp; Getting to Know People
+  </div>
+
+</div>
+
+<script>
+/* ── Tabs ── */
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('active'); });
+  if(el){ el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  var s = document.getElementById('sec-'+tab); if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Helpers ── */
+function normalize(s){ if(!s) return ''; return s.toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' '); }
+function wordsOf(str){ return normalize(str).replace(/[¿?¡!.,;:]/g,' ').split(/\s+/).filter(Boolean); }
+function val(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+function setMsg(id, ok, text){ var m=document.getElementById(id); if(!m) return; m.textContent=text; m.className='res-msg '+(ok?'ok':'ng'); }
+function showFb(id, ok, msg){ var fb=document.getElementById(id); if(!fb) return; fb.className='task-fb show '+(ok?'ok':'ng'); fb.textContent=(ok?'✓ ':'✗ ')+msg; }
+function clearFb(id){ var fb=document.getElementById(id); if(fb) fb.className='task-fb'; }
+
+/* ── Flashcards ── */
+var vocabGreet = [
+  {es:'Hola', note:'informal', en:'Hi / Hello'},
+  {es:'Buenos días', note:'formal · a.m.', en:'Good morning'},
+  {es:'Buenas tardes', note:'formal · p.m.', en:'Good afternoon'},
+  {es:'Buenas noches', note:'formal · noche', en:'Good evening / Good night'},
+  {es:'¿Cómo está usted?', note:'formal', en:'How are you?'},
+  {es:'¿Cómo estás?', note:'informal', en:'How are you?'},
+  {es:'¿Qué tal?', note:'informal', en:"How's it going?"},
+  {es:'Mucho gusto', note:'presentación', en:'Nice to meet you'},
+  {es:'Igualmente', note:'respuesta', en:'Likewise / Same here'},
+  {es:'Adiós', note:'despedida', en:'Goodbye'},
+  {es:'Hasta luego', note:'despedida', en:'See you later'},
+  {es:'Hasta mañana', note:'despedida', en:'See you tomorrow'},
+  {es:'Cuídese', note:'formal · salida', en:'Take care'},
+  {es:'Que se mejore', note:'formal · salud', en:'Get well soon'}
+];
+var vocabPhrases = [
+  {es:'¿Cómo se dice…?', note:'clase', en:'How do you say…?'},
+  {es:'¿Qué significa…?', note:'clase', en:'What does… mean?'},
+  {es:'No entiendo', note:'clase · clínica', en:"I don't understand"},
+  {es:'¿Puede repetir?', note:'formal', en:'Can you repeat?'},
+  {es:'Más despacio, por favor', note:'formal', en:'Slower, please'},
+  {es:'¿Cómo se escribe?', note:'admisión', en:'How do you spell it?'},
+  {es:'Un momento, por favor', note:'formal', en:'One moment, please'},
+  {es:'¿Habla usted inglés?', note:'clínica', en:'Do you speak English?'},
+  {es:'Necesito un intérprete', note:'clínica', en:'I need an interpreter'},
+  {es:'¿En qué puedo ayudarle?', note:'formal', en:'How can I help you?'}
+];
+function buildFlash(list, containerId, extraClass){
+  var c = document.getElementById(containerId);
+  list.forEach(function(v){
+    var card = document.createElement('div');
+    card.className = 'vocab-card' + (extraClass ? ' '+extraClass : '');
+    card.setAttribute('onclick', "this.classList.toggle('flipped')");
+    card.innerHTML = '<div class="vocab-card-inner"><div class="vocab-front">'+v.es+'<small>'+v.note+'</small></div><div class="vocab-back">'+v.en+'</div></div>';
+    c.appendChild(card);
+  });
+}
+
+/* ── Fill-in blanks ── */
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(','), correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.classList.remove('ok','ng');
+    if(normalize(el.value) === normalize(el.getAttribute('data-answer'))){ el.classList.add('ok'); correct++; }
+    else el.classList.add('ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct===total){ msg.textContent='¡Perfecto! '+correct+' / '+total+' correctas. ✓'; msg.className='res-msg ok'; }
+    else { msg.textContent=correct+' / '+total+' correctas. Revisa las marcadas en rojo.'; msg.className='res-msg ng'; }
+  }
+  updateCompletion();
+}
+function resetBlanks(idsCSV, resultId){
+  idsCSV.split(',').forEach(function(id){ var el=document.getElementById(id); if(el){ el.value=''; el.classList.remove('ok','ng'); } });
+  var msg=document.getElementById(resultId); if(msg){ msg.textContent=''; msg.className='res-msg'; }
+  updateCompletion();
+}
+
+/* ── Multiple-choice engine ── */
+var quizState = {}, MC_SETS = {};
+function buildMC(data, key, containerId, compact){
+  var container = document.getElementById(containerId); if(!container) return;
+  quizState[key] = data.map(function(){ return null; }); MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = compact ? '' : 'quiz-item'; div.id = key+'_item_'+i;
+    var head = compact
+      ? '<div class="rc-label">✓ Comprueba</div><div class="rc-q">'+item.q+'</div><div class="rc-gloss">'+item.gloss+'</div>'
+      : '<div class="quiz-q"><span class="qnum">'+(i+1)+'.</span>'+item.q+'</div><div class="quiz-gloss">'+item.gloss+'</div>';
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="'+key+'_'+i+'_'+j+'" onclick="pickMC(\''+key+'\','+i+','+j+')"><span class="letter">'+'ABCD'[j]+'</span><span>'+opt+'</span></button>';
+    }).join('');
+    div.innerHTML = head + '<div class="quiz-options">'+opts+'</div><div class="quiz-explain" id="'+key+'_exp_'+i+'"></div>';
+    container.appendChild(div);
+  });
+}
+function pickMC(key, i, j){
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){ document.getElementById(key+'_'+i+'_'+k).classList.toggle('selected', k===j); });
+  updateCompletion();
+}
+function revealMC(key, i){
+  var item = MC_SETS[key][i], chosen = quizState[key][i], ok = chosen===item.answer;
+  item.options.forEach(function(_, j){ var btn=document.getElementById(key+'_'+i+'_'+j); btn.classList.remove('is-correct','is-wrong'); if(j===item.answer) btn.classList.add('is-correct'); else if(j===chosen) btn.classList.add('is-wrong'); });
+  var exp = document.getElementById(key+'_exp_'+i); exp.className='quiz-explain show';
+  exp.innerHTML = '<strong>'+(ok?'✓ ¡Correcto!':'✗ No exactamente.')+'</strong> '+item.explain;
+  var wrap = document.getElementById(key+'_item_'+i); if(wrap.className.indexOf('quiz-item')===0) wrap.className='quiz-item '+(ok?'correct':'wrong');
+  return ok;
+}
+function resetMC(key){
+  var data = MC_SETS[key]; quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){ item.options.forEach(function(_, j){ document.getElementById(key+'_'+i+'_'+j).className='quiz-opt'; }); document.getElementById(key+'_exp_'+i).className='quiz-explain'; var wrap=document.getElementById(key+'_item_'+i); if(wrap.className.indexOf('quiz-item')===0) wrap.className='quiz-item'; });
+}
+
+var quizData = [
+  { q:'Yo <u>___</u> de Guatemala.', gloss:'ser · origen', options:['es','soy','eres','son'], answer:1, explain:'Origin uses <strong>ser</strong> + <em>de</em>: Yo <strong>soy de</strong> Guatemala.' },
+  { q:'Usted recibe a una paciente nueva. La pregunta correcta es…', gloss:'registro formal', options:['¿Cómo te llamas?','¿Cómo se llama usted?','¿Cómo me llamo?','¿Cómo se llaman?'], answer:1, explain:'With a new adult patient, use <strong>usted</strong>: ¿Cómo <strong>se llama</strong> usted?' },
+  { q:'La letra <em>h</em> en «hola» se pronuncia…', gloss:'pronunciación', options:['como la h inglesa','muda (silent)','como la j','como la g'], answer:1, explain:'Spanish <em>h</em> is <strong>always silent</strong>: <em>hola</em> sounds like "ola."' },
+  { q:'¿Qué vocal suena siempre como "ee" (see)?', gloss:'vocales', options:['a','e','i','u'], answer:2, explain:'The vowel <strong>i</strong> is always "ee": <em>Luis</em>, <em>clínica</em>.' },
+  { q:'Nosotros <u>___</u> estudiantes de enfermería.', gloss:'ser · nosotros', options:['son','es','somos','soy'], answer:2, explain:'<em>ser</em> nosotros → <strong>somos</strong>.' },
+  { q:'«Me llamo Ana» significa…', gloss:'llamarse', options:['My name is Ana','I call Ana','She is called Ana','You are named Ana'], answer:0, explain:'<em>Me llamo</em> literally "I call myself" = <strong>My name is</strong>.' },
+  { q:'Son las 8:00 p.m. Usted saluda a un paciente con…', gloss:'saludos', options:['Buenos días','Buenas tardes','Buenas noches','Hasta mañana'], answer:2, explain:'After dark, use <strong>Buenas noches</strong> — it works as both a greeting and a farewell.' },
+  { q:'«¿De dónde es usted?» pregunta sobre…', gloss:'preguntas personales', options:['su nombre','su origen','su edad','su profesión'], answer:1, explain:'<em>¿De dónde es usted?</em> asks about <strong>origin</strong> — where the person is from.' },
+  { q:'La <em>ñ</em> en «mañana» suena como…', gloss:'pronunciación', options:['n','ny','ni','m'], answer:1, explain:'<em>ñ</em> = <strong>"ny"</strong>, as in "canyon": ma-<strong>ny</strong>a-na.' },
+  { q:'El verbo que acompaña a <em>usted</em> tiene la misma forma que…', gloss:'pronombres', options:['yo','tú','él/ella','nosotros'], answer:2, explain:'<em>Usted</em> takes the <strong>él/ella</strong> form: usted <strong>es</strong>, usted <strong>se llama</strong>.' }
+];
+
+function checkQuiz(){
+  var correct = 0; quizData.forEach(function(_, i){ if(revealMC('quiz', i)) correct++; });
+  setMsg('rsQuiz', correct===quizData.length, correct+' / '+quizData.length+' correctas.'+(correct===quizData.length?' ¡Perfecto! ✓':' Lee cada explicación.'));
+  updateCompletion();
+}
+function resetQuiz(){ resetMC('quiz'); document.getElementById('rsQuiz').className='res-msg'; document.getElementById('rsQuiz').textContent=''; updateCompletion(); }
+
+/* ── Matching game ── */
+var matchData = [
+  {es:'Buenos días', en:'Good morning'},
+  {es:'Buenas tardes', en:'Good afternoon'},
+  {es:'¿Cómo se llama usted?', en:'What is your name? (formal)'},
+  {es:'¿De dónde es usted?', en:'Where are you from? (formal)'},
+  {es:'No entiendo', en:"I don't understand"},
+  {es:'¿Puede repetir?', en:'Can you repeat?'},
+  {es:'Más despacio, por favor', en:'Slower, please'},
+  {es:'¿Cómo se escribe?', en:'How do you spell it?'},
+  {es:'Necesito un intérprete', en:'I need an interpreter'},
+  {es:'Cuídese', en:'Take care (formal)'}
+];
+var mSelEs = null, mSelEn = null, mMatched = 0, matchDone = false;
+function buildMatch(){
+  var c = document.getElementById('matchCont');
+  var order = matchData.map(function(_, i){ return i; });
+  for(var k=order.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=order[k]; order[k]=order[r]; order[r]=t; }
+  var esHtml = matchData.map(function(m, i){ return '<div class="mi" id="mes-'+i+'" data-idx="'+i+'" onclick="selSpanish(this)">'+(i+1)+'. '+m.es+'</div>'; }).join('');
+  var enHtml = order.map(function(idx){ return '<div class="mi" id="men-'+idx+'" data-idx="'+idx+'" onclick="selEnglish(this)">'+matchData[idx].en+'</div>'; }).join('');
+  c.innerHTML = '<div class="match-cols"><div><div class="match-col-label">Español</div>'+esHtml+'</div><div><div class="match-col-label">English</div>'+enHtml+'</div></div>';
+  mSelEs=null; mSelEn=null; mMatched=0; matchDone=false;
+  document.getElementById('rsMatch').textContent=''; document.getElementById('rsMatch').className='res-msg';
+  updateCompletion();
+}
+function selSpanish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=mes-]').forEach(function(i){ i.classList.remove('sel'); }); el.classList.add('sel'); mSelEs=el; tryMatch(); }
+function selEnglish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=men-]').forEach(function(i){ i.classList.remove('sel','bad'); }); el.classList.add('sel'); mSelEn=el; tryMatch(); }
+function tryMatch(){
+  if(!mSelEs || !mSelEn) return;
+  if(mSelEs.dataset.idx === mSelEn.dataset.idx){
+    mSelEs.classList.remove('sel'); mSelEs.classList.add('done'); mSelEn.classList.remove('sel'); mSelEn.classList.add('done'); mMatched++;
+    if(mMatched===matchData.length){ matchDone=true; setMsg('rsMatch', true, '¡Excelente! Emparejaste las '+mMatched+' frases. ✓'); }
+  } else { var bad=mSelEn; bad.classList.add('bad'); setTimeout(function(){ bad.classList.remove('bad','sel'); }, 700); }
+  mSelEs=null; mSelEn=null; updateCompletion();
+}
+
+/* ── Short answer ── */
+var shortData = [
+  { q:'¿Cómo se llama usted?', gloss:'What is your name?', key:'llamo', minW:3, hint:'Empieza con «Me llamo…».' },
+  { q:'¿De dónde es usted?', gloss:'Where are you from?', key:'soy', minW:3, hint:'Usa «Soy de…».' },
+  { q:'¿Cuál es su profesión?', gloss:'What is your profession?', key:'soy', minW:3, hint:'Usa «Soy…» + profesión (sin artículo).' },
+  { q:'Salude a un paciente por la mañana y preséntese.', gloss:'Greet a patient in the morning and introduce yourself.', key:'buenos', minW:5, hint:'Empieza con «Buenos días…» y añade tu nombre.' },
+  { q:'Pregúntele a un paciente nuevo cómo se llama (formal).', gloss:'Ask a new patient their name, formally.', key:'llama', minW:3, hint:'Usa «¿Cómo se llama usted?».' }
+];
+function buildShort(){
+  var c = document.getElementById('shortCont');
+  c.innerHTML = shortData.map(function(s, i){
+    return '<div style="margin-bottom:14px;"><div style="font-size:0.92rem;font-weight:700;color:var(--navy);">'+(i+1)+'. '+s.q+' <span style="font-weight:400;color:var(--text-hint);font-style:italic;font-size:0.82rem;">'+s.gloss+'</span></div><input class="task-input" id="sa'+i+'" placeholder="Escribe tu respuesta…" autocomplete="off"><div class="task-fb" id="fbsa'+i+'"></div></div>';
+  }).join('');
+}
+function gradeShort(i){
+  var s = shortData[i], v = val('sa'+i), w = wordsOf(v);
+  if(!v) return { ok:false, msg:'Escribe tu respuesta.' };
+  if(w.length < s.minW) return { ok:false, msg:'Escribe una oración completa (mínimo '+s.minW+' palabras).' };
+  if(w.indexOf(normalize(s.key)) === -1) return { ok:false, msg:s.hint };
+  return { ok:true, msg:'¡Bien! Respuesta completa.' };
+}
+function checkShort(){
+  var correct = 0;
+  shortData.forEach(function(_, i){ var r=gradeShort(i); document.getElementById('sa'+i).style.borderBottomColor = r.ok?'var(--sage)':'var(--terracotta)'; showFb('fbsa'+i, r.ok, r.msg); if(r.ok) correct++; });
+  setMsg('rs7', correct===shortData.length, correct+' / '+shortData.length+' respuestas válidas.');
+  updateCompletion();
+}
+function resetShort(){
+  shortData.forEach(function(_, i){ var el=document.getElementById('sa'+i); el.value=''; el.style.borderBottomColor=''; clearFb('fbsa'+i); });
+  document.getElementById('rs7').className='res-msg'; document.getElementById('rs7').textContent=''; updateCompletion();
+}
+
+/* ── Conjugation challenge ── */
+var gameData = [
+  {s:'yo', v:'ser', a:'soy', o:['soy','eres','es']},
+  {s:'tú', v:'ser', a:'eres', o:['soy','eres','son']},
+  {s:'usted', v:'ser', a:'es', o:['eres','es','soy']},
+  {s:'nosotros', v:'ser', a:'somos', o:['somos','son','soy']},
+  {s:'ellos', v:'ser', a:'son', o:['son','es','somos']},
+  {s:'ella', v:'ser', a:'es', o:['es','eres','soy']},
+  {s:'yo', v:'llamarse', a:'me llamo', o:['me llamo','te llamas','se llama']},
+  {s:'tú', v:'llamarse', a:'te llamas', o:['se llama','te llamas','nos llamamos']},
+  {s:'usted', v:'llamarse', a:'se llama', o:['te llamas','se llama','me llamo']},
+  {s:'nosotros', v:'llamarse', a:'nos llamamos', o:['nos llamamos','se llaman','me llamo']},
+  {s:'ellos', v:'llamarse', a:'se llaman', o:['se llama','se llaman','te llamas']},
+  {s:'él', v:'llamarse', a:'se llama', o:['me llamo','se llama','te llamas']}
+];
+var gIdx=0, gScore=0, gStreak=0, gFinished=false, gLock=false;
+function startGame(){
+  gIdx=0; gScore=0; gStreak=0; gFinished=false; gLock=false;
+  document.getElementById('gScore').textContent='0'; document.getElementById('gStreak').textContent='0';
+  document.getElementById('gFb').textContent=''; document.getElementById('gFb').className='game-feedback';
+  showGameQ(); updateCompletion();
+}
+function showGameQ(){
+  var q = gameData[gIdx];
+  document.getElementById('gNum').textContent = (gIdx+1)+'/'+gameData.length;
+  document.getElementById('gPrompt').textContent = q.s+' + '+q.v;
+  document.getElementById('gSub').textContent = 'Choose the correct present-tense form of «'+q.v+'» for «'+q.s+'».';
+  var opts = q.o.slice();
+  for(var k=opts.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=opts[k]; opts[k]=opts[r]; opts[r]=t; }
+  document.getElementById('gOpts').innerHTML = opts.map(function(o){ return '<button type="button" class="game-opt" onclick="pickGame(this,\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>'; }).join('');
+  gLock=false;
+}
+function pickGame(el, choice){
+  if(gLock) return; gLock=true;
+  var q = gameData[gIdx], fb = document.getElementById('gFb');
+  var ok = normalize(choice) === normalize(q.a);
+  document.querySelectorAll('#gOpts .game-opt').forEach(function(b){ if(normalize(b.textContent)===normalize(q.a)) b.classList.add('is-correct'); });
+  if(ok){ gScore++; gStreak++; fb.textContent='✓ ¡Correcto! '+q.s+' '+q.a+'.'; fb.className='game-feedback ok'; }
+  else { gStreak=0; el.classList.add('is-wrong'); fb.textContent='✗ '+q.s+' '+q.a+'.'; fb.className='game-feedback ng'; }
+  document.getElementById('gScore').textContent=gScore; document.getElementById('gStreak').textContent=gStreak;
+  setTimeout(function(){
+    gIdx++;
+    if(gIdx < gameData.length){ showGameQ(); }
+    else { gFinished=true; document.getElementById('gPrompt').innerHTML='<span class="game-done">¡Fin! '+gScore+' / '+gameData.length+'</span>'; document.getElementById('gSub').textContent = gScore===gameData.length?'¡Perfecto! Dominas ser y llamarse.':'Pulsa "Restart Game" para intentarlo de nuevo.'; document.getElementById('gOpts').innerHTML=''; document.getElementById('gNum').textContent=gameData.length+'/'+gameData.length; }
+    updateCompletion();
+  }, 950);
+}
+
+/* ── Completion meter ── */
+function idsFilled(prefix, n){ var out=[]; for(var i=1;i<=n;i++) out.push(val(prefix+i).length>0); return out; }
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length>0]; } },
+  { label:'Ejercicios', tab:'ej', items:function(){
+      return idsFilled('e1_',8).concat(idsFilled('e2_',6), idsFilled('e3_',6), idsFilled('e4_',6), idsFilled('e5_',6), idsFilled('e6_',6),
+        shortData.map(function(_, i){ return val('sa'+i).length>0; })); } },
+  { label:'Juegos', tab:'ju', items:function(){ return [matchDone].concat(quizData.map(function(_, i){ return quizState['quiz'][i]!==null; }), [gFinished]); } }
+];
+function completionStats(){ return completionGroups.map(function(g){ var a=g.items(); return { label:g.label, tab:g.tab, done:a.filter(Boolean).length, total:a.length }; }); }
+
+/* ── Live score: correct answers across every auto-graded item ── */
+function blanksCorrect(prefix, n){ var c=0; for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(el && el.value.trim() && normalize(el.value)===normalize(el.getAttribute('data-answer'))) c++; } return c; }
+function computeScore(){
+  var correct=0, total=0;
+  correct += blanksCorrect('e1_',8)+blanksCorrect('e2_',6)+blanksCorrect('e3_',6)+blanksCorrect('e4_',6)+blanksCorrect('e5_',6)+blanksCorrect('e6_',6); total += 38;
+  shortData.forEach(function(_, i){ if(val('sa'+i) && gradeShort(i).ok) correct++; }); total += shortData.length;
+  correct += mMatched; total += matchData.length;
+  quizData.forEach(function(it, i){ if(quizState['quiz'] && quizState['quiz'][i]===it.answer) correct++; }); total += quizData.length;
+  correct += gScore; total += gameData.length;
+  return { correct:correct, total:total };
+}
+function updateScore(){ var s=computeScore(); var pct=s.total?Math.round(s.correct/s.total*100):0; var el=document.getElementById('completionScore'); if(el) el.textContent='★ '+pct+'% correcto'; }
+
+function updateCompletion(){
+  var stats = completionStats(), d=0, t=0;
+  stats.forEach(function(g){ d+=g.done; t+=g.total; });
+  var pct = t ? Math.round(d/t*100) : 0;
+  document.getElementById('completionPct').textContent = pct+'%';
+  document.getElementById('pf').style.width = pct+'%';
+  document.getElementById('completionLegend').innerHTML = stats.map(function(g){ return '<button type="button" class="legend-pill '+(g.done===g.total?'done':'')+'" onclick="jumpTab(\''+g.tab+'\')">'+g.label+' '+g.done+'/'+g.total+'</button>'; }).join('');
+  updateScore();
+}
+function jumpTab(tab){ var btns=document.querySelectorAll('.tab'); for(var i=0;i<btns.length;i++){ if((btns[i].getAttribute('onclick')||'').indexOf("'"+tab+"'")!==-1){ switchTab(tab, btns[i]); return; } } switchTab(tab, null); }
+document.addEventListener('input', updateCompletion);
+document.addEventListener('change', updateCompletion);
+
+/* ── Student report ── */
+function escapeHtml(str){ return (str==null?'':String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function stripTags(html){ var dv=document.createElement('div'); dv.innerHTML=html||''; return (dv.textContent||'').replace(/\s+/g,' ').trim(); }
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){ return '<tr class="'+(it.value?(it.ok?'ok':'bad'):'blank')+'"><td class="num">'+escapeHtml(it.label)+'</td><td>'+(it.value?escapeHtml(it.value):'<span class="blanktxt">(en blanco)</span>')+'</td><td class="note">'+escapeHtml(it.msg||'')+'</td><td class="mark">'+(it.value?(it.ok?'✓':'✗'):'—')+'</td></tr>'; }).join('');
+    return '<h3>'+escapeHtml(g.heading)+'</h3><table><tbody>'+rows+'</tbody></table>';
+  }).join('');
+  return '<h2>'+escapeHtml(title)+'<span class="score">'+escapeHtml(scoreText)+'</span></h2>'+blocks;
+}
+function collectBlanks(prefix, n, heading){
+  var items=[], correct=0;
+  for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(!el) continue; var v=(el.value||'').trim(), expected=el.getAttribute('data-answer')||''; var ok=normalize(v)===normalize(expected); if(ok) correct++; items.push({ label:String(i), value:v, ok:ok, msg: ok?'Correcto.':'Respuesta: '+expected }); }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+function buildReportHtml(name){
+  var stamp = new Date().toLocaleString('en-US',{ year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  var g1=collectBlanks('e1_',8,'Ej 1 — El verbo SER'), g2=collectBlanks('e2_',6,'Ej 2 — LLAMARSE'), g3=collectBlanks('e3_',6,'Ej 3 — Pronombres personales'), g4=collectBlanks('e4_',6,'Ej 4 — ¿Usted o tú?'), g5=collectBlanks('e5_',6,'Ej 5 — Saludos y despedidas'), g6=collectBlanks('e6_',6,'Ej 6 — Frases esenciales');
+  var blanks=[g1,g2,g3,g4,g5,g6], blankCorrect=0, blankTotal=0; blanks.forEach(function(g){ blankCorrect+=g.correct; blankTotal+=g.total; });
+  var saItems = shortData.map(function(s, i){ var v=val('sa'+i), r=gradeShort(i); return { label:s.q, value:v, ok:r.ok, msg:r.msg }; });
+  var saCorrect = saItems.filter(function(x){return x.ok;}).length;
+  var mcItems = quizData.map(function(item, i){ var ch=quizState['quiz'][i]; return { label:String(i+1), value: ch===null?'':stripTags(item.options[ch]), ok: ch===item.answer, msg: ch===item.answer?'Correcto.':'Correcta: '+stripTags(item.options[item.answer]) }; });
+  var mcCorrect = mcItems.filter(function(x){return x.ok;}).length;
+  var matchItem = [{ label:'Emparejamiento', value: matchDone?(matchData.length+' / '+matchData.length):(mMatched+' / '+matchData.length), ok: matchDone, msg: matchDone?'Completado.':'Sin terminar.' }];
+  var gameItem = [{ label:'Reto de conjugación', value: gFinished?(gScore+' / '+gameData.length):'', ok: gFinished && gScore>=10, msg: gFinished?(gScore>=10?'¡Bien dominado!':'Practica un poco más.'):'Sin terminar.' }];
+
+  var totalCorrect = blankCorrect + saCorrect + mcCorrect + mMatched + gScore;
+  var totalItems = blankTotal + saItems.length + mcItems.length + matchData.length + gameData.length;
+  var scorePct = totalItems ? Math.round(totalCorrect/totalItems*100) : 0;
+
+  var stats = completionStats(), cd=0, ct=0; stats.forEach(function(g){ cd+=g.done; ct+=g.total; });
+  var cpct = ct?Math.round(cd/ct*100):0;
+  var compRows = stats.map(function(g){ return '<li class="'+(g.done===g.total?'checked':'')+'">'+(g.done===g.total?'☑':'☐')+' '+escapeHtml(g.label)+' — '+g.done+' / '+g.total+'</li>'; }).join('');
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Reporte Capítulo 1 — '+escapeHtml(name)+'</title><style>'+
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}"+
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;}'+
+  'h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}'+
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;} .meta strong{color:#1B2A4A;}"+
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}'+
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}'+
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}"+
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}"+
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;}'+
+  'td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}'+
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;white-space:nowrap;}"+
+  'td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;} td.mark{text-align:center;font-weight:bold;width:26px;}'+
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;} tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}'+
+  '.blanktxt{color:#A89A88;} ul.check{list-style:none;padding:0;font-size:0.9rem;} ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;} ul.check li.checked{color:#4C7A3C;}'+
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}"+
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}'+
+  '</style></head><body>'+
+  '<header><h1>Spanish for Healthcare Workers · Capítulo 1</h1><p class="meta"><strong>Estudiante:</strong> '+escapeHtml(name)+' &nbsp;·&nbsp; <strong>Primeras palabras</strong> &nbsp;·&nbsp; Generado: '+escapeHtml(stamp)+'</p></header>'+
+  '<div class="summary"><strong>Puntuación:</strong> '+totalCorrect+' / '+totalItems+' correctas (<strong>'+scorePct+'%</strong>) · Página completada al <strong>'+cpct+'%</strong> ('+cd+' / '+ct+' elementos)</div>'+
+  '<h2>Progreso por sección</h2><ul class="check">'+compRows+'</ul>'+
+  reportTable('Ejercicios 1–6 (fill-in)', blankCorrect+' / '+blankTotal+' correctas', blanks)+
+  reportTable('Ejercicio 7 — Respuesta corta', saCorrect+' / '+saItems.length+' válidas', [{ heading:'En la clínica', items:saItems }])+
+  reportTable('Juegos', mcCorrect+' / '+mcItems.length+' en el quiz', [{ heading:'Juego 2 — Opción múltiple', items:mcItems }, { heading:'Juego 1 — Emparejamiento', items:matchItem }, { heading:'Juego 3 — Reto de conjugación', items:gameItem }])+
+  '<footer>South Puget Sound Community College · Spanish for Healthcare Workers · Capítulo 1 · Para entregar como PDF, abre este archivo e imprime → Guardar como PDF.</footer></body></html>';
+}
+function downloadReport(){
+  var field=document.getElementById('studentName'), name=(field.value||'').trim();
+  if(!name){ field.focus(); field.style.borderColor='#A8452A'; alert('Escribe tu nombre primero. / Please enter your name before downloading the report.'); setTimeout(function(){ field.style.borderColor=''; },2500); return; }
+  var html=buildReportHtml(name); var safe=name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'estudiante';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'}); var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download='Capitulo1_SpanishHealthcare_'+safe+'.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+}
+
+/* ── Build everything (after completion meter is defined) ── */
+buildFlash(vocabGreet, 'fcGreet', '');
+buildFlash(vocabPhrases, 'fcPhrases', 'conn-card');
+buildMC(quizData, 'quiz', 'quizCont', false);
+buildMatch();
+buildShort();
+startGame();
+updateCompletion();
+</script>
+
+</body>
+</html>
